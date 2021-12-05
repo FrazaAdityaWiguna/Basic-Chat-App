@@ -1,5 +1,6 @@
 const app = require('express')()
-const server = require('http').createServer(app)
+const server = require('http' ||
+  'https://simplechatapp01.herokuapp.com/').createServer(app)
 const io = require('socket.io')(server, {})
 
 app.get('/', (req, res) => {
