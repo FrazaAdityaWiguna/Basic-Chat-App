@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
-let countUserOnline = 1
+let countUserOnline = 0
 io.on('connection', (socket) => {
   socket.on('join', (params) => {
     console.log('User Join')
